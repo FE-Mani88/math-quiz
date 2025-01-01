@@ -1,0 +1,87 @@
+{
+
+    "seventhEasyQuiz": [
+      {
+        "id": 1,
+        "grade": 7,
+        "difficulty": "easy",
+        "question": " اگر زاویه ای 45 درجه باشد مکمل آن چند است؟",
+        "options": ["135", "145", "150", "125"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 2,
+        "grade": 7,
+        "difficulty": "easy",
+        "question": "اگر سکه ای را 24 بار پرتاب کنیم انتظار داریم چند بار رو بیاید؟",
+        "options": ["8", "24", "12", "16"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 3,
+        "grade": 7,
+        "difficulty": "easy",
+        "question": "کدام گزینه شمارنده ی 48 نیست؟",
+        "options": ["24", "48", "12", "36"],
+        "correctAnswer": 4
+      },
+      {
+        "id": 4,
+        "grade": 7,
+        "difficulty": "easy",
+        "question": "در یک مثلث متساوی‌الساقین، اگر زاویه رأس ۶۰ درجه باشد، هر یک از زاویه‌های قاعده چند درجه است؟",
+        "options": ["50", "60", "65", "70"],
+        "correctAnswer": 2
+      },
+      {
+        "id": 5,
+        "grade": 7,
+        "difficulty": "easy",
+        "question": "تاسی را می اندازیم عددی کمتر از 7 بیید. احتمال آمدن این اتفاق چند است؟",
+        "options": ["0", "1", "1/3", "2/6"],
+        "correctAnswer": 2
+      }
+    ],
+    "seventhMediumQuiz": [
+      {
+        "id": 6,
+        "grade": 7,
+        "difficulty": "medium",
+        "question": "مساحت یک مثلث با قاعده 8 سانتی‌متر و ارتفاع 5 سانتی‌متر چقدر است؟",
+        "options": ["20 سانتی‌متر مربع", "40 سانتی‌متر مربع", "16 سانتی‌متر مربع", "32 سانتی‌متر مربع"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 7,
+        "grade": 7,
+        "difficulty": "medium",
+        "question": "-15+28-13-4=?",
+        "options": ["-6", "-3", "4", "-4"],
+        "correctAnswer": 4
+      },
+      {
+        "id": 8,
+        "grade": 7,
+        "difficulty": "medium",
+        "question": "3x-7=2x+5-4",
+        "options": ["x=7", "x=5", "x=8", "x=2"],
+        "correctAnswer": 3
+      },
+      {
+        "id": 9,
+        "grade": 7,
+        "difficulty": "medium",
+        "question": "کدام یک از اعداد زیر اول است؟",
+        "options": ["61", "63", "65", "67"],
+        "correctAnswer": 1
+      },
+      {
+        "id": 10,
+        "grade": 7,
+        "difficulty": "medium",
+        "question": "حجم یک مخروط با شعاع قاعده 4 سانتی‌متر و ارتفاع 9 سانتی‌متر چقدر است؟",
+        "options": ["150.72", "120.96", "113.04", "144.72"],
+        "correctAnswer": 1
+      }
+    ]
+}
