@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-
+import { motion } from 'framer-motion'
 
 export default function Welcome() {
 
@@ -17,7 +17,7 @@ export default function Welcome() {
 
         setActive(true)
     }
-    
+
 
     useEffect(() => {
         let currentTheme = localStorage.getItem('theme')
@@ -54,6 +54,11 @@ export default function Welcome() {
             setActive(true)
         }
     }
+
+    const variants = {
+        hidden: { x: '100%', opacity: 0 }, // حالت پنهان: خارج از صفحه و شفافیت 0
+        visible: { x: 0, opacity: 1 }, // حالت قابل مشاهده: در موقعیت اصلی و شفافیت 1
+    };
 
     ///////////////////change nav style when user scrolling in page
     const [scrolled, setScrolled] = useState(false)
@@ -98,7 +103,11 @@ export default function Welcome() {
                         </nav>
                     </div>
                 </header>
-                <main id='testBg' className={active === false ? "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
+                <motion.main initial="hidden" // شروع با حالت پنهان
+                    animate="visible" // انیمیشن به حالت قابل مشاهده
+                    variants={variants} // تعیین حالت‌ها
+                    transition={{ duration: 0.7 }}
+                    id='testBg' className={active === false ? "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
                     <div className='container'>
                         <div className='flex items-center'>
                             <div className='xl:flex lg:flex md:flex flex-col-reverse sm:flex-row-reverse md:flex-row-reverse md:mt-[120px] sm:flex block items-center w-full justify-around mt-[85px] px-[7.5px]'>
@@ -129,7 +138,7 @@ export default function Welcome() {
                             </div>
                         </div>
                     </div>
-                </main>
+                </motion.main>
 
                 <aside className={active ? 'fixed h-full right-0 top-0 mr-[-225px] transition-all duration-200' : 'fixed h-full right-0 top-0 mr-0 transition-all duration-200'} onClick={barHider}>
                     <div className='h-[716px] min-w-[220px] max-w-[250px] bg-zinc-800 text-white md:hidden'>

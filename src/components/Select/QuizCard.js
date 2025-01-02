@@ -3,11 +3,25 @@ import { Link } from 'react-router-dom';
 import { Clock, BookOpen, BarChart } from 'lucide-react';
 // import { DIFFICULTY_COLORS } from '../utils/constants';
 import { DIFFICULTY_COLORS } from './utils/constants';
+import { easeIn, easeInOut, motion } from 'framer-motion';
+
 
 export function QuizCard({ id, title, description, difficulty, duration, totalQuestions, image }) {
+
+  const variants = {
+    hidden: { x: '100%', opacity: 0 }, // حالت پنهان: خارج از صفحه و شفافیت 0
+    visible: { x: 0, opacity: 1 }, // حالت قابل مشاهده: در موقعیت اصلی و شفافیت 1
+    transition: {
+      easeInOut: 'linear'
+    }
+  };
+
   return (
     <Link to={`/quiz/${id}`} className="block">
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+      <motion.div initial="hidden" // شروع با حالت پنهان
+        animate="visible" // انیمیشن به حالت قابل مشاهده
+        variants={variants} // تعیین حالت‌ها
+        transition={{ duration: 0.5}} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
         <div className="h-48 overflow-hidden">
           <img
             src={image}
@@ -38,7 +52,7 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css'
 import './input.css';
 import { Routes, Route } from 'react-router-dom'
+// import { motion } from 'framer-motion';
 /////////////////Components//////////////////
 // import {Welcome, Home, Contact, Shop, Info, Error404} from './components';
 import Welcome from './components/Welcome/Welcome'
