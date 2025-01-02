@@ -69,6 +69,16 @@ export const questions = {
         question: "اگر زاویه داخلی یک چندضلعی منتظم 144 درجه باشد، این چندضلعی چند ضلع دارد؟",
         options: ["5", "10", "12", "8"],
         correctAnswer: '10'
+      },
+      {
+        question: "5 - (-3) * 2 + 4 - 9 = ?",
+        options: ["1", "6", "11", "2"],
+        correctAnswer: "6"
+      },
+      {
+        question: "(-4) * (5 - 3) + 6 = ?",
+        options: ["-2", "-3", "-1", "1"],
+        correctAnswer: "-2"
       }
     ],
     '8-easy': [

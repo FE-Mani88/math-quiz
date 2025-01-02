@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Clock, BookOpen, BarChart, ArrowLeft, GraduationCap, List } from 'lucide-react';
 // import { quizzes } from '../data/quizzes';
@@ -6,11 +6,26 @@ import { quizzes } from './data/quizzes';
 // import { DIFFICULTY_COLORS } from '../utils/constants';
 import { DIFFICULTY_COLORS } from './utils/constants';
 import { ActiveQuiz } from './ActiveQuiz';
+import ThemeToggle from '../ThemeToggle';
+
 
 export function QuizDetails() {
   const { id } = useParams();
   const quiz = quizzes.find(q => q.id === id);
   const [isStarted, setIsStarted] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme === 'dark';
+  });
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
 
   if (!quiz) {
     return (
@@ -30,13 +45,14 @@ export function QuizDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 dark:bg-[#1b2433] transition-all">
+      <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
       <div className="max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8">
+        <Link to="/" className="inline-flex items-center dark:text-gray-300 text-gray-600 hover:text-gray-900 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Quizzes
         </Link>
-        
+
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="h-64 overflow-hidden">
             <img
@@ -45,53 +61,53 @@ export function QuizDetails() {
               className="w-full h-full object-cover"
             />
           </div>
-          
-          <div className="p-8">
+
+          <div className="p-8 dark:bg-[#293546]">
             <div className="flex items-center justify-between mb-6">
-              <h1 className="text-3xl font-bold text-gray-900">{quiz.title}</h1>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{quiz.title}</h1>
               <span className={`px-4 py-2 rounded-full text-sm font-medium ${DIFFICULTY_COLORS[quiz.difficulty]}`}>
                 {quiz.difficulty}
               </span>
             </div>
 
-            <p className="text-gray-600 text-lg mb-8">{quiz.description}</p>
+            <p className="text-gray-600 text-lg mb-8 dark:text-gray-300">{quiz.description}</p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="flex items-center space-x-3 text-gray-700">
-                <Clock className="w-6 h-6" />
+              <div className="flex items-center gap-2 space-x-3 text-gray-700">
+                <Clock className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500">Duration</p>
-                  <p className="font-medium">{quiz.duration} minutes</p>
+                  <p className="text-sm text-gray-500 dark:text-white">Duration</p>
+                  <p className="font-medium dark:text-white">{quiz.duration} minutes</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-3 text-gray-700">
-                <BookOpen className="w-6 h-6" />
+
+              <div className="flex items-center gap-2 space-x-3 text-gray-700">
+                <BookOpen className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500">Questions</p>
-                  <p className="font-medium">{quiz.totalQuestions} total</p>
+                  <p className="text-sm text-gray-500 dark:text-white">Questions</p>
+                  <p className="font-medium dark:text-white">{quiz.totalQuestions} total</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-3 text-gray-700">
-                <GraduationCap className="w-6 h-6" />
+
+              <div className="flex items-center space-x-3 text-gray-700 gap-2">
+                <GraduationCap className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500">Grade</p>
-                  <p className="font-medium">{quiz.grade}th Grade</p>
+                  <p className="text-sm text-gray-500 dark:text-white">Grade</p>
+                  <p className="font-medium dark:text-white">{quiz.grade}th Grade</p>
                 </div>
               </div>
-              
-              <div className="flex items-center space-x-3 text-gray-700">
-                <BarChart className="w-6 h-6" />
+
+              <div className="flex items-center gap-2 space-x-3 text-gray-700">
+                <BarChart className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500">Difficulty</p>
-                  <p className="font-medium capitalize">{quiz.difficulty}</p>
+                  <p className="text-sm text-gray-500 dark:text-white">Difficulty</p>
+                  <p className="font-medium capitalize dark:text-white">{quiz.difficulty}</p>
                 </div>
               </div>
             </div>
 
             <div className="mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-4 flex items-center gap-2">
                 <List className="w-5 h-5 mr-2" />
                 Topics Covered
               </h3>
@@ -99,7 +115,7 @@ export function QuizDetails() {
                 {quiz.topics.map((topic, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                    className="px-3 py-1 dark:text-white bg-gray-100 dark:bg-gray-900 text-gray-700 rounded-full text-sm"
                   >
                     {topic}
                   </span>
@@ -107,7 +123,7 @@ export function QuizDetails() {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setIsStarted(true)}
               className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >

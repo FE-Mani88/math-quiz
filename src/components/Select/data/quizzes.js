@@ -29,7 +29,7 @@ export const quizzes = [
       description: 'Challenge yourself with complex word problems and mathematical reasoning.',
       duration: 45,
       totalQuestions: 25,
-      image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&q=80&w=600',
+      image: 'https://t3.ftcdn.net/jpg/04/83/90/18/360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8.jpg',
       topics: ['Problem Solving', 'Logic', 'Complex Operations']
     },
     {
@@ -62,7 +62,7 @@ export const quizzes = [
       description: 'Complex algebraic problems and system of equations.',
       duration: 50,
       totalQuestions: 25,
-      image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&q=80&w=600',
+      image: 'https://t3.ftcdn.net/jpg/04/83/90/18/360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8.jpg',
       topics: ['Systems of Equations', 'Complex Problems', 'Applications']
     },
     {
@@ -95,7 +95,7 @@ export const quizzes = [
       description: 'Complex problems combining algebra, geometry, and trigonometry.',
       duration: 60,
       totalQuestions: 25,
-      image: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&q=80&w=600',
+      image: 'https://t3.ftcdn.net/jpg/04/83/90/18/360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8.jpg',
       topics: ['Combined Topics', 'Complex Problems', 'Real-world Applications']
     }
   ];

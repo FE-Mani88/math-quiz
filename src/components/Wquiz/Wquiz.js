@@ -55,7 +55,7 @@ function Wquiz() {
 
                     {/* Start Button */}
                     <div className="flex justify-center pt-4">
-                        <Link to='/bquiz'>
+                        <Link to='/select'>
                             <button
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
