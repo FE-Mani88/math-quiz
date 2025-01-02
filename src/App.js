@@ -39,7 +39,7 @@ function App() {
       {loaded ? (<Routes>
         <Route path="/quiz/:id" element={<QuizDetails />} />
         <Route path="/select" element={
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-gray-50 dark:bg-[#1a2331]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center">
@@ -56,11 +56,10 @@ function App() {
                   <button
                     key={grade}
                     onClick={() => setSelectedGrade(selectedGrade === grade ? null : grade)}
-                    className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                      selectedGrade === grade
+                    className={`px-6 py-3 rounded-lg font-medium transition-colors ${selectedGrade === grade
                         ? 'bg-blue-600 text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-50'
-                    }`}
+                      }`}
                   >
                     Grade {grade}
                   </button>
