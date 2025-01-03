@@ -74,7 +74,7 @@ export default function Welcome() {
 
     return (
         <>
-            <div className='overflow-hidden bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[107vh]'>
+            <div className=' overflow-hidden overflow-y-hidden bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[100vh]'>
                 <header className={active === false ? 'fixed w-full shadow-sm shadow-gray-200 dark:shadow-none bg-white dark:bg-zinc-800 border-b-[0.5px] border-gray-500 dark:border-gray-700 blur-sm md:bg-gray-300 transition-all md:dark:bg-zinc-800 md:border-b-[0.5px] md:border-gray-500 md:dark:border-gray-700 md:blur-none' : 'fixed w-full shadow-sm dark:shadow-none transition-all duration-200 shadow-gray-200 bg-white dark:bg-zinc-800 border-b-[0.1px] border-gray-50 dark:border-gray-700'} onClick={barHider}>
                     <div className='container'>
                         <nav className={scrolled ? 'dark:bg-[#302e30] sm:bg-[#f1eeef] bg-[#ded7db]' : ''}>
@@ -103,17 +103,14 @@ export default function Welcome() {
                         </nav>
                     </div>
                 </header>
-                <main initial="hidden" // شروع با حالت پنهان
-                    animate="visible" // انیمیشن به حالت قابل مشاهده
-                    variants={variants} // تعیین حالت‌ها
-                    transition={{ duration: 0.7 }}
-                    id='testBg' className={active === false ? "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
+                <main
+                    id='testBg' className={active === false ? "overflow-y-hidden md:bg-[url('./darkimage.jpg')] dark:md:bg-[url('./image.jpg')] object-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "overflow-y-hidden md:bg-[url('./darkimage.jpg')] dark:md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
                     <div className='container'>
                         <div className='flex items-center'>
                             <div className='xl:flex lg:flex md:flex flex-col-reverse sm:flex-row-reverse md:flex-row-reverse md:mt-[120px] sm:flex block items-center w-full justify-around mt-[85px] px-[7.5px]'>
 
-                                <section id='img-cont' className='md:hidden xl:w-[550px] xl:min-w-[550px] lg:w-[550px] lg:min-w-[550px] md:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[285px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
-                                    <img className='w-full object-cover rounded-lg overflow-hidden' src="./images/AjiMaji.png" alt="Picture" />
+                                <section id='img-cont' className='mt-8 md:hidden xl:w-[550px] xl:min-w-[550px] lg:w-[550px] lg:min-w-[550px] md:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[305px] min-h-[280px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
+                                    <img className='w-full object-cover min-h-[280px] rounded-lg overflow-hidden' src="./images/image.png" alt="Picture" />
                                 </section>
 
                                 <section className='flex flex-col basis-[50%] sm:mt-[100px] mt-12 mx-1.5 text-center'>
