@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, BookOpen, BarChart } from 'lucide-react';
+import { Clock, BookOpen, BarChart, CheckCircle } from 'lucide-react';
 // import { DIFFICULTY_COLORS } from '../utils/constants';
 import { DIFFICULTY_COLORS } from './utils/constants';
 import { easeIn, easeInOut, motion } from 'framer-motion';
 import ThemeToggle from '../ThemeToggle';
+import { quizStorage } from './utils/quizStorage';
 
 export function QuizCard({ id, title, description, difficulty, duration, totalQuestions, image }) {
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'dark';
   });
+
+  const isCompleted = quizStorage.isQuizCompleted(id);
+  console.log(isCompleted);
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
@@ -31,11 +36,17 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
   return (
     <>
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
-      <Link to={`/quiz/${id}`} className="block">
+      <Link to={`/quiz/${id}`} className="block relative">
         <motion.div initial="hidden" // شروع با حالت پنهان
           animate="visible" // انیمیشن به حالت قابل مشاهده
           variants={variants} // تعیین حالت‌ها
           transition={{ duration: 0.5 }} className="bg-white dark:bg-[#293546] rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+            {isCompleted && (
+              <div className="absolute -top-2 -right-2 z-10">
+                <CheckCircle className="w-8 h-8 text-green-500 bg-white rounded-full" />
+              </div>
+            )}
+
           <div className="h-48 overflow-hidden">
             <img
               src={image}

@@ -64,6 +64,7 @@ export function ActiveQuiz({ quiz }) {
         questions={quizQuestions}
         quizTitle={quiz.title}
         onRetry={handleRetry}
+        quizId={quiz.id}
       />
     );
   }

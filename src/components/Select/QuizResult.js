@@ -2,9 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, XCircle, CheckCircle, RotateCcw } from 'lucide-react';
 import ThemeToggle from '../ThemeToggle';
+// import { quizStorage } from '../utils/quizStorage';
+import { quizStorage } from './utils/quizStorage';
 
-export function QuizResults({ score, totalQuestions, answers, questions, quizTitle, onRetry }) {
+export function QuizResults({ score, totalQuestions, answers, questions, quizTitle, onRetry, quizId }) {
   const percentage = Math.round((score / totalQuestions) * 100);
+
+  useEffect(() => {
+    // Mark quiz as completed when results are shown
+    quizStorage.markQuizCompleted(quizId);
+  }, [quizId]);
 
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -64,7 +71,7 @@ export function QuizResults({ score, totalQuestions, answers, questions, quizTit
               Try Again
             </button>
             <Link
-              to="/"
+              to="/select"
               className="flex-1 flex items-center justify-center bg-slate-300 dark:text-white dark:bg-slate-500 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
             >
               Back to Quizzes

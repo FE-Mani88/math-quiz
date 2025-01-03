@@ -103,7 +103,7 @@ export default function Welcome() {
                         </nav>
                     </div>
                 </header>
-                <motion.main initial="hidden" // شروع با حالت پنهان
+                <main initial="hidden" // شروع با حالت پنهان
                     animate="visible" // انیمیشن به حالت قابل مشاهده
                     variants={variants} // تعیین حالت‌ها
                     transition={{ duration: 0.7 }}
@@ -138,7 +138,7 @@ export default function Welcome() {
                             </div>
                         </div>
                     </div>
-                </motion.main>
+                </main>
 
                 <aside className={active ? 'fixed h-full right-0 top-0 mr-[-225px] transition-all duration-200' : 'fixed h-full right-0 top-0 mr-0 transition-all duration-200'} onClick={barHider}>
                     <div className='h-[716px] min-w-[220px] max-w-[250px] bg-zinc-800 text-white md:hidden'>

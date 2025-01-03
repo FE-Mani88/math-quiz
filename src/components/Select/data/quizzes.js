@@ -7,7 +7,7 @@ export const quizzes = [
       description: 'Practice fundamental math operations including addition, subtraction, multiplication, and division.',
       duration: 20,
       totalQuestions: 15,
-      image: 'https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&q=80&w=600',
+      image: 'https://t3.ftcdn.net/jpg/04/44/26/52/360_F_444265238_2Trl35YochoIznHyqeNvA651xs6mzArm.jpg',
       topics: ['Arithmetic', 'Basic Operations', 'Word Problems']
     },
     {
@@ -18,7 +18,7 @@ export const quizzes = [
       description: 'Learn basic algebraic expressions and simple equations.',
       duration: 30,
       totalQuestions: 20,
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20230503013704/Mathematics-Banner.webp',
       topics: ['Variables', 'Expressions', 'Simple Equations']
     },
     {
@@ -40,7 +40,7 @@ export const quizzes = [
       description: 'Learn about basic geometric shapes and their properties.',
       duration: 25,
       totalQuestions: 15,
-      image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=600',
+      image: 'https://t3.ftcdn.net/jpg/04/83/90/18/360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8.jpg',
       topics: ['Shapes', 'Angles', 'Perimeter']
     },
     {
@@ -51,7 +51,7 @@ export const quizzes = [
       description: 'Master linear equations and their applications.',
       duration: 35,
       totalQuestions: 20,
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGhAJjvgxShaDTndohHFPFz8sFATlPDhNGA&s',
       topics: ['Linear Equations', 'Graphs', 'Word Problems']
     },
     {
@@ -62,7 +62,7 @@ export const quizzes = [
       description: 'Complex algebraic problems and system of equations.',
       duration: 50,
       totalQuestions: 25,
-      image: 'https://t3.ftcdn.net/jpg/04/83/90/18/360_F_483901821_46VsNR67uJC3xIKQN4aaxR6GtAZhx9G8.jpg',
+      image: 'https://t3.ftcdn.net/jpg/04/44/26/52/360_F_444265238_2Trl35YochoIznHyqeNvA651xs6mzArm.jpg',
       topics: ['Systems of Equations', 'Complex Problems', 'Applications']
     },
     {
@@ -73,7 +73,7 @@ export const quizzes = [
       description: 'Introduction to trigonometric concepts and ratios.',
       duration: 30,
       totalQuestions: 15,
-      image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=600',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGhAJjvgxShaDTndohHFPFz8sFATlPDhNGA&s',
       topics: ['Trigonometric Ratios', 'Right Triangles', 'Basic Applications']
     },
     {
@@ -84,7 +84,7 @@ export const quizzes = [
       description: 'Learn to solve quadratic equations and their applications.',
       duration: 40,
       totalQuestions: 20,
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20230503013704/Mathematics-Banner.webp',
       topics: ['Quadratic Equations', 'Graphs', 'Word Problems']
     },
     {
