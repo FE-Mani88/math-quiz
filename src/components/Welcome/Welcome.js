@@ -74,7 +74,7 @@ export default function Welcome() {
 
     return (
         <>
-            <div className='overflow-y-visible bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[150vh] md:h-[100vh]'>
+            <div className='overflow-x-hidden overflow-y-visible bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[150vh] md:h-[100vh]'>
                 <header className={active === false ? 'fixed w-full shadow-sm shadow-gray-200 dark:shadow-none bg-white dark:bg-zinc-800 border-b-[0.5px] border-gray-500 dark:border-gray-700 blur-sm md:bg-gray-300 transition-all md:dark:bg-zinc-800 md:border-b-[0.5px] md:border-gray-500 md:dark:border-gray-700 md:blur-none' : 'fixed w-full shadow-sm dark:shadow-none transition-all duration-200 shadow-gray-200 bg-white dark:bg-zinc-800 border-b-[0.1px] border-gray-50 dark:border-gray-700'} onClick={barHider}>
                     <div className='container'>
                         <nav className={scrolled ? 'dark:bg-[#302e30] sm:bg-[#f1eeef] bg-[#ded7db]' : ''}>
@@ -109,8 +109,8 @@ export default function Welcome() {
                         <div className='flex items-center'>
                             <div className='xl:flex lg:flex md:flex flex-col-reverse sm:flex-row-reverse md:flex-row-reverse md:mt-[120px] sm:flex block items-center w-full justify-around mt-[85px] px-[7.5px]'>
 
-                                <section id='img-cont' className='mt-8 md:hidden xl:w-[550px] xl:min-w-[550px] lg:w-[550px] lg:min-w-[550px] md:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[305px] min-h-[280px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
-                                    <img className='w-full object-cover min-h-[280px] rounded-lg overflow-hidden' src="./images/image.png" alt="Picture" />
+                                <section id='img-cont' className='mt-8 md:hidden xl:w-[550px] xl:min-w-[550px] lg:w-[550px] lg:min-w-[550px] md:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[305px] min-h-[260px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
+                                    <img className='w-full object-cover min-h-[260px] rounded-lg overflow-hidden' src="./images/image.png" alt="Picture" />
                                 </section>
 
                                 <section className='flex flex-col basis-[50%] sm:mt-[100px] mt-12 mx-1.5 text-center'>
@@ -123,10 +123,10 @@ export default function Welcome() {
                                     <div className='text-center mt-6'>
                                         <div className='flex justify-evenly'>
                                             <Link to='/wquiz'>
-                                                <button className='bg-gradient-to-r from-[#663ddf] to-[#aa00ff] pl-4 pr-4 pt-2 pb-2 rounded-lg animate-pulse gap-2.5 text-white hover:bg-purple-700 active:bg-purple-800 transition-all text-2xl flex items-center'>
-                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg>
+                                                <button className='bg-blue-600'>
+                                                    {/* <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg> */}
                                                     <p>بزن بریم</p>
-                                                    <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg>
+                                                    {/* <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg> */}
                                                 </button>
                                             </Link>
                                         </div>
