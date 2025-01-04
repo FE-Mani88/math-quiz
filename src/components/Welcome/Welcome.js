@@ -74,7 +74,7 @@ export default function Welcome() {
 
     return (
         <>
-            <div className='bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[107vh]'>
+            <div className='overflow-visible bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[107vh]'>
                 <header className={active === false ? 'fixed w-full shadow-sm shadow-gray-200 dark:shadow-none bg-white dark:bg-zinc-800 border-b-[0.5px] border-gray-500 dark:border-gray-700 blur-sm md:bg-gray-300 transition-all md:dark:bg-zinc-800 md:border-b-[0.5px] md:border-gray-500 md:dark:border-gray-700 md:blur-none' : 'fixed w-full shadow-sm dark:shadow-none transition-all duration-200 shadow-gray-200 bg-white dark:bg-zinc-800 border-b-[0.1px] border-gray-50 dark:border-gray-700'} onClick={barHider}>
                     <div className='container'>
                         <nav className={scrolled ? 'dark:bg-[#302e30] sm:bg-[#f1eeef] bg-[#ded7db]' : ''}>
@@ -90,8 +90,8 @@ export default function Welcome() {
                                     <li className='cursor-pointer transition-all delay-50 duration-200 text-black hover:text-[#695dda] active:text-purple-800 dark:text-white dark:hover:text-sky-600 dark:active:text-sky-800'><Link to="/info">اطلاعات</Link></li>
                                 </ul>
                                 <div className='flex justify-between gap-3 items-center'>
-                                    <button className='bg-sky-600 px-4 py-2 rounded-lg text-white hover:bg-sky-700 active:bg-sky-800 transition-all delay-[15ms] w-20 text-[0.71rem] sm:text-lg md:text-xl lg:text-xl sm:w-max'>ارتباط با ما</button>
-                                    <button className='bg-[#695dda] px-4  py-2 rounded-lg text-white hover:bg-purple-800 active:bg-purple-900 transition-all delay-[15ms] w-20 text-[0.85rem] sm:text-[1.2rem] md:text-xl lg:text-xl sm:w-max'>درباره ما</button>
+                                    <button className='bg-sky-600 px-4 py-2 rounded-lg text-white hover:bg-sky-700 active:bg-sky-800 transition-all delay-[15ms] w-20 text-[0.65rem] sm:text-lg md:text-xl lg:text-xl sm:w-max'>ارتباط با ما</button>
+                                    <button className='bg-[#695dda] px-4  py-2 rounded-lg text-white hover:bg-purple-800 active:bg-purple-900 transition-all delay-[15ms] w-20 text-[0.7rem] sm:text-[1.2rem] md:text-xl lg:text-xl sm:w-max'>درباره ما</button>
                                     <svg onClick={() => { darkHandler() }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="sm:size-10 size-[35px] text-[#695dda] cursor-pointer active:text-gray-500 transition-all duration-300 delay-50 hover:text-gray-600 dark:hover:text-blue-500 dark:text-white">
                                         <path fillRule="evenodd" d="M8.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clipRule="evenodd" />
                                     </svg>
@@ -118,7 +118,7 @@ export default function Welcome() {
                                         اما چرا ما؟
                                     </h2>
                                     <p className='xl:text-2xl lg:text-2xl md:text-xl sm:lg text-center mx-auto dark:text-gray-400 text-wrap flex flex-wrap break-words'>
-                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگ های مختلف وجود دارد.
+                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگت های مختلف وجود دارد.
                                     </p>
                                     <div className='text-center mt-6'>
                                         <div className='flex justify-evenly'>
