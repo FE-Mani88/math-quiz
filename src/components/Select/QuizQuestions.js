@@ -9,10 +9,10 @@ export function QuizQuestion({ question, selectedAnswer, onAnswerSelect }) {
           <button
             key={index}
             onClick={() => onAnswerSelect(option)}
-            className={`w-full p-4 text-left rounded-lg transition-colors ${
+            className={`w-full p-4 text-left rounded-lg transition-colors text-black ${
               selectedAnswer === option
-                ? 'bg-blue-100 border-2 border-blue-500 dark:bg-[#293546] text-white'
-                : 'bg-gray-50 hover:bg-gray-100 dark:bg-[#3e4a5c] text-white'
+                ? 'bg-blue-200 border-2 border-blue-500 dark:bg-[#293546] dark:text-white '
+                : 'bg-gray-100 hover:bg-gray-200 dark:bg-[#3e4a5c] dark:text-white '
             }`}
           >
             {option}

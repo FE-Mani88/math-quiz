@@ -74,7 +74,7 @@ export default function Welcome() {
 
     return (
         <>
-            <div className=' overflow-hidden overflow-y-hidden bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[100vh]'>
+            <div className='overflow-hidden overflow-y-hidden bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[107vh]'>
                 <header className={active === false ? 'fixed w-full shadow-sm shadow-gray-200 dark:shadow-none bg-white dark:bg-zinc-800 border-b-[0.5px] border-gray-500 dark:border-gray-700 blur-sm md:bg-gray-300 transition-all md:dark:bg-zinc-800 md:border-b-[0.5px] md:border-gray-500 md:dark:border-gray-700 md:blur-none' : 'fixed w-full shadow-sm dark:shadow-none transition-all duration-200 shadow-gray-200 bg-white dark:bg-zinc-800 border-b-[0.1px] border-gray-50 dark:border-gray-700'} onClick={barHider}>
                     <div className='container'>
                         <nav className={scrolled ? 'dark:bg-[#302e30] sm:bg-[#f1eeef] bg-[#ded7db]' : ''}>

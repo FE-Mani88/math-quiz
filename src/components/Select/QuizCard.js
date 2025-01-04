@@ -40,7 +40,7 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
         <motion.div initial="hidden" // شروع با حالت پنهان
           animate="visible" // انیمیشن به حالت قابل مشاهده
           variants={variants} // تعیین حالت‌ها
-          transition={{ duration: 0.5 }} className="bg-white dark:bg-[#293546] rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105">
+          transition={{ duration: 0.5 }} className="bg-white dark:bg-[#293546] rounded-xl shadow-lg overflow-hidden">
             {isCompleted && (
               <div className="absolute -top-2 -right-2 z-10">
                 <CheckCircle className="w-8 h-8 text-green-500 bg-white rounded-full" />
