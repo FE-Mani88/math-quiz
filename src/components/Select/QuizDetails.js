@@ -48,7 +48,7 @@ export function QuizDetails() {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 dark:bg-[#1b2433] transition-all">
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
       <div className="max-w-4xl mx-auto">
-        <Link to="/" className="inline-flex items-center dark:text-gray-300 text-gray-600 hover:text-gray-900 mb-8">
+        <Link to="/select" className="inline-flex items-center dark:text-gray-300 text-gray-600 hover:text-gray-900 mb-8">
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Quizzes
         </Link>

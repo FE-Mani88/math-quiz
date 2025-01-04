@@ -74,7 +74,7 @@ export default function Welcome() {
 
     return (
         <>
-            <div className='overflow-visible bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[107vh]'>
+            <div className='overflow-y-visible bg-white dark:bg-gray-800 transition-all duration-[325ms] h-[150vh] md:h-[100vh]'>
                 <header className={active === false ? 'fixed w-full shadow-sm shadow-gray-200 dark:shadow-none bg-white dark:bg-zinc-800 border-b-[0.5px] border-gray-500 dark:border-gray-700 blur-sm md:bg-gray-300 transition-all md:dark:bg-zinc-800 md:border-b-[0.5px] md:border-gray-500 md:dark:border-gray-700 md:blur-none' : 'fixed w-full shadow-sm dark:shadow-none transition-all duration-200 shadow-gray-200 bg-white dark:bg-zinc-800 border-b-[0.1px] border-gray-50 dark:border-gray-700'} onClick={barHider}>
                     <div className='container'>
                         <nav className={scrolled ? 'dark:bg-[#302e30] sm:bg-[#f1eeef] bg-[#ded7db]' : ''}>
@@ -118,7 +118,7 @@ export default function Welcome() {
                                         اما چرا ما؟
                                     </h2>
                                     <p className='xl:text-2xl lg:text-2xl md:text-xl sm:lg text-center mx-auto dark:text-gray-400 text-wrap flex flex-wrap break-words'>
-                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگت های مختلف وجود دارد.
+                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگتی های مختلف وجود دارد.
                                     </p>
                                     <div className='text-center mt-6'>
                                         <div className='flex justify-evenly'>
