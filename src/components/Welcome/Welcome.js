@@ -118,7 +118,7 @@ export default function Welcome() {
                                         اما چرا ما؟
                                     </h2>
                                     <p className='xl:text-2xl lg:text-2xl md:text-xl sm:lg text-center mx-auto dark:text-gray-400 text-wrap flex flex-wrap break-words'>
-                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگتی های مختلف وجود دارد.
+                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشود. همچنین در لست تستینگتی هابی مختلف وجود دارد.
                                     </p>
                                     <div className='text-center mt-6'>
                                         <div className='flex justify-evenly'>
