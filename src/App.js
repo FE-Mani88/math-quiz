@@ -24,7 +24,7 @@ import { quizzes } from './components/Select/data/quizzes';
 
 function App() {
   const [selectedGrade, setSelectedGrade] = useState(null);
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(true)
 
   const filteredQuizzes = selectedGrade
     ? quizzes.filter(quiz => quiz.grade === selectedGrade)
