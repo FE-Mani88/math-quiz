@@ -37,7 +37,7 @@ export function QuizResults({ score, totalQuestions, answers, questions, quizTit
             </div>
             <h1 className="text-3xl font-bold dark:text-white text-gray-900 mb-2">{quizTitle} - Results</h1>
             <p className="text-2xl font-semibold text-blue-600">
-              Your Score: {score}/{totalQuestions} ({percentage}%)
+              امتیاز شما: {score}/{totalQuestions} (%{percentage})
             </p>
           </div>
 
@@ -52,9 +52,9 @@ export function QuizResults({ score, totalQuestions, answers, questions, quizTit
                   )}
                   <div>
                     <p className="font-medium text-gray-900 mb-2 dark:text-white">{question.question}</p>
-                    <p className="text-sm text-gray-600 dark:text-white">Your answer: {answers[index]}</p>
+                    <p className="text-sm text-gray-600 dark:text-white">پاسخ شما: {answers[index]}</p>
                     {answers[index] !== question.correctAnswer && (
-                      <p className="text-sm text-green-600">Correct answer: {question.correctAnswer}</p>
+                      <p className="text-sm text-green-600">پاسخ صحیح: {question.correctAnswer}</p>
                     )}
                   </div>
                 </div>
@@ -68,13 +68,13 @@ export function QuizResults({ score, totalQuestions, answers, questions, quizTit
               className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
             >
               <RotateCcw className="w-5 h-5" />
-              Try Again
+              تلاش دوباره
             </button>
             <Link
               to="/select"
               className="flex-1 flex items-center justify-center bg-slate-300 dark:text-white dark:bg-slate-500 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors"
             >
-              Back to Quizzes
+              بازگشت به آزمون ها
             </Link>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
+import Typewriter from 'typewriter-effect';
+
 
 export default function Welcome() {
 
@@ -55,11 +57,6 @@ export default function Welcome() {
         }
     }
 
-    const variants = {
-        hidden: { x: '100%', opacity: 0 }, // حالت پنهان: خارج از صفحه و شفافیت 0
-        visible: { x: 0, opacity: 1 }, // حالت قابل مشاهده: در موقعیت اصلی و شفافیت 1
-    };
-
     ///////////////////change nav style when user scrolling in page
     const [scrolled, setScrolled] = useState(false)
 
@@ -104,21 +101,29 @@ export default function Welcome() {
                     </div>
                 </header>
                 <main
-                    id='testBg' className={active === false ? "overflow-y-hidden md:bg-[url('./darkimage.jpg')] dark:md:bg-[url('./image.jpg')] object-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "overflow-y-hidden md:bg-[url('./darkimage.jpg')] dark:md:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
-                    <div className='container'>
+                    id='testBg' className={active === false ? "xl:bg-[url('./darkimage.jpg')] dark:xl:bg-[url('./image.jpg')] object-cover w-full h-[100vh] blur-sm md:w-full md:h-[100vh] md:blur-none" : "xl:bg-[url('./darkimage.jpg')] dark:xl:bg-[url('./image.jpg')] bg-cover w-full h-[100vh]"} onClick={barHider}>
+                    <div className='xl:container'>
                         <div className='flex items-center'>
                             <div className='xl:flex lg:flex md:flex flex-col-reverse sm:flex-row-reverse md:flex-row-reverse md:mt-[120px] sm:flex block items-center w-full justify-around mt-[85px] px-[7.5px]'>
 
-                                <section id='img-cont' className='mt-8 md:hidden xl:w-[550px] xl:min-w-[550px] lg:w-[550px] lg:min-w-[550px] md:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[305px] min-h-[260px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
-                                    <img className='w-full object-cover min-h-[260px] rounded-lg overflow-hidden' src="./images/image.png" alt="Picture" />
+                                <section id='img-cont' className='mt-8 xl:hidden xl:w-[550px] xl:min-w-[550px]  lg:w-[420px] md:min-w-[420px] sm:w-[400px] sm:min-w-[400px] min-w-[305px] min-h-[260px] max-w-[410px] shadow-xl shadow-gray-600 rounded-lg overflow-hidden mx-auto m-2'>
+                                    <img className='w-full object-cover min-h-[260px] rounded-lg overflow-hidden' src="./darkimage.png" alt="Picture" />
                                 </section>
 
                                 <section className='flex flex-col basis-[50%] sm:mt-[100px] mt-12 mx-1.5 text-center'>
-                                    <h2 className='text-5xl text-black dark:text-white text-wrap text-center mb-4'>
-                                        اما چرا ما؟
+                                    <h2 className='sm:text-5xl text-black dark:text-white text-wrap text-center mb-4 text-[1.25rem]'>
+                                        <Typewriter
+                                            onInit={(typewriter) => {
+                                                typewriter.typeString('اما چرا باید mathyar رو انتخاب کنیم؟')
+                                                    .start()
+                                                    .pauseFor(3000)
+                                                    .deleteAll()
+                                                    .typeString('mathyar - پلتفرم آزمون های ریاضی')
+                                            }}
+                                        />
                                     </h2>
                                     <p className='xl:text-2xl lg:text-2xl md:text-xl sm:lg text-center mx-auto dark:text-gray-400 text-wrap flex flex-wrap break-words'>
-                                        لورم ایپسوم دالر متن تستی جهت پیش نمایش برای انواع برنامه ها در صنعت چاپ و تستینگ استفاده میشودبت همچنین در لست تستینگتی هابی مختلف وجود دارد.
+                                        پلتفرم ریاضی ما با آزمون های متنوع در مباحث پایه و کاربردی ریاضی در سه سطح آسان، متوسط و سخت مناسب دانش آموزان متوسطه ی اول به بهبود ریاضی و سطح تفکر در مسائل شما کمک میکند.
                                     </p>
                                     <div className='text-center mt-6'>
                                         <div className='flex justify-evenly'>

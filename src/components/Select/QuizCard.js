@@ -36,16 +36,16 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
   return (
     <>
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
-      <Link to={`/quiz/${id}`} className="block relative">
+      <Link to={`/quiz/${id}`} className="block relative hover:translate-y-[-8px] transition-all">
         <motion.div initial="hidden" // شروع با حالت پنهان
           animate="visible" // انیمیشن به حالت قابل مشاهده
           variants={variants} // تعیین حالت‌ها
           transition={{ duration: 0.5 }} className="bg-white dark:bg-[#293546] rounded-xl shadow-lg overflow-hidden">
-            {isCompleted && (
-              <div className="absolute -top-2 -right-2 z-10">
-                <CheckCircle className="w-8 h-8 text-green-500 bg-white rounded-full" />
-              </div>
-            )}
+          {isCompleted && (
+            <div className="absolute -top-2 -right-2 z-10">
+              <CheckCircle className="w-8 h-8 text-green-500 bg-white rounded-full" />
+            </div>
+          )}
 
           <div className="h-48 overflow-hidden">
             <img
@@ -58,22 +58,22 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-200">{title}</h3>
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${DIFFICULTY_COLORS[difficulty]}`}>
-                {difficulty}
+                {difficulty === 'hard' ? 'سخت' : difficulty === 'medium' ? 'متوسط' : 'آسان'}
               </span>
             </div>
             <p className="text-gray-600 mb-4 line-clamp-2 dark:text-gray-300">{description}</p>
             <div className="flex items-center justify-between text-gray-500">
               <div className="flex items-center space-x-2 dark:text-white">
                 <Clock className="w-4 h-4" />
-                <span>{duration} mins</span>
+                <span>{duration} دقیقه</span>
               </div>
               <div className="flex items-center space-x-2 dark:text-white">
                 <BookOpen className="w-4 h-4" />
-                <span>{totalQuestions} questions</span>
+                <span>{totalQuestions} سوال</span>
               </div>
               <div className="flex items-center gap-1 space-x-2 dark:text-white">
                 <BarChart className="w-4 h-4" />
-                <span>{difficulty}</span>
+                <span>{difficulty === 'hard' ? 'سخت' : difficulty === 'medium' ? 'متوسط' : 'آسان'}</span>
               </div>
             </div>
           </div>

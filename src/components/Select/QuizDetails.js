@@ -48,9 +48,9 @@ export function QuizDetails() {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 dark:bg-[#1b2433] transition-all">
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
       <div className="max-w-4xl mx-auto">
-        <Link to="/select" className="inline-flex items-center dark:text-gray-300 text-gray-600 hover:text-gray-900 mb-8">
+        <Link to="/select" className="inline-flex gap-2 items-center dark:text-gray-300 text-gray-600 hover:text-gray-900 mb-8 hover:translate-x-[-8px] transition-all">
           <ArrowLeft className="w-5 h-5 mr-2" />
-          Back to Quizzes
+          بازگشت به آزمون ها
         </Link>
 
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -76,32 +76,32 @@ export function QuizDetails() {
               <div className="flex items-center gap-2 space-x-3 text-gray-700">
                 <Clock className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-white">Duration</p>
-                  <p className="font-medium dark:text-white">{quiz.duration} minutes</p>
+                  <p className="text-sm text-gray-500 dark:text-white">مدت زمان</p>
+                  <p className="font-medium dark:text-white">{quiz.duration} دقیقه</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 space-x-3 text-gray-700">
                 <BookOpen className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-white">Questions</p>
-                  <p className="font-medium dark:text-white">{quiz.totalQuestions} total</p>
+                  <p className="text-sm text-gray-500 dark:text-white">تعداد سوالات</p>
+                  <p className="font-medium dark:text-white">{quiz.totalQuestions} سوال</p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3 text-gray-700 gap-2">
                 <GraduationCap className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-white">Grade</p>
-                  <p className="font-medium dark:text-white">{quiz.grade}th Grade</p>
+                  <p className="text-sm text-gray-500 dark:text-white"> پایه تحصیلی</p>
+                  <p className="font-medium dark:text-white">{quiz.grade === 7 ? "هفتم" : quiz.grade === 8 ? "هشتم" : "نهم"}</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 space-x-3 text-gray-700">
                 <BarChart className="w-6 h-6 dark:text-white" />
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-white">Difficulty</p>
-                  <p className="font-medium capitalize dark:text-white">{quiz.difficulty}</p>
+                  <p className="text-sm text-gray-500 dark:text-white">سطح آزمون</p>
+                  <p className="font-medium capitalize dark:text-white">{quiz.difficulty === 'easy' ? 'آسان': quiz.difficulty === 'medium' ? 'متوسط': 'سخت'}</p>
                 </div>
               </div>
             </div>
