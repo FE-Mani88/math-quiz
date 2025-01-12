@@ -47,7 +47,7 @@ function App() {
                   <GraduationCap className="w-10 h-10 mr-3 dark:text-white" />
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-300">
-                  Choose your grade and difficulty level to get started
+                  پایه تحصیلی خود را انتخاب کنید و آزمون مورد نظر خود را انتخاب کنید
                 </p>
               </div>
 
