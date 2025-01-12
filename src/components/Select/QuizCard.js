@@ -36,7 +36,7 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
   return (
     <>
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark(!isDark)} />
-      <Link to={`/quiz/${id}`} className="block relative hover:translate-y-[-8px] transition-all">
+      <Link to={`/quiz/${id}`} className="block relative hover:translate-y-[-8px] transition-all duration-300">
         <motion.div initial="hidden" // شروع با حالت پنهان
           animate="visible" // انیمیشن به حالت قابل مشاهده
           variants={variants} // تعیین حالت‌ها
@@ -63,11 +63,11 @@ export function QuizCard({ id, title, description, difficulty, duration, totalQu
             </div>
             <p className="text-gray-600 mb-4 line-clamp-2 dark:text-gray-300">{description}</p>
             <div className="flex items-center justify-between text-gray-500">
-              <div className="flex items-center space-x-2 dark:text-white">
+              <div className="flex items-center space-x-2 gap-1 dark:text-white">
                 <Clock className="w-4 h-4" />
                 <span>{duration} دقیقه</span>
               </div>
-              <div className="flex items-center space-x-2 dark:text-white">
+              <div className="flex items-center space-x-2 dark:text-white gap-1">
                 <BookOpen className="w-4 h-4" />
                 <span>{totalQuestions} سوال</span>
               </div>
