@@ -55,14 +55,14 @@ export default function Landing() {
 
                   <ul class="chip0 cxgjn cutr6 c4mnq cbv5p">
                     <li className='c8h5l'>
-                      <a class="chip0 c4mnq c5mpl chs2t cazq3 ckdyj cdm1x c6m7s ckwz7 cysah cua40 make-btn"
+                      <a class="sm:!px-4 !px-2 chip0 c4mnq c5mpl chs2t cazq3 ckdyj cdm1x c6m7s ckwz7 cysah cua40 make-btn"
                         href="#">
                         <p className='txt-margin !text-[11.1px] sm:!text-[18px] '> ساخت اکانت  </p>
                         <User />
                       </a>
                     </li>
                     <li class="c8h5l flex items-center">
-                      <a class="!text-[11.1px] sm:!text-[18px] c2pi2 c0ayg c4wey cl6ef cf4pm cqbpd cxmkl c4aul c76qn" href="#">
+                      <a class="sm:!px-4 !px-2 !text-[11.2px] sm:!text-[18px] c2pi2 c0ayg c4wey cl6ef cf4pm cqbpd cxmkl c4aul c76qn" href="#">
                         ورود به اکانت <span class="cfe40 cr1tk c56im cv73b c6m7s ckwz7 ccx8x"><LogIn /></span>
                       </a>
                     </li>
