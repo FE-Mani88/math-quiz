@@ -52,7 +52,7 @@ html {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    /* font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" */
 }
 
 body {
@@ -1086,7 +1086,7 @@ input[type=range]::-moz-focus-outer {
 }
 
 .c8h5l {
-    margin-left: 0.75rem
+    margin-left: 0.5rem
 }
 
 .cfe40 {
@@ -1326,6 +1326,7 @@ input[type=range]::-moz-focus-outer {
 }
 
 .cnmzr {
+    z-index: 1;
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
@@ -2411,6 +2412,34 @@ input[type=range]::-moz-focus-outer {
     }
 }
 
-.dir {
+/* .dir {
     direction: ltr !important;
+} */
+
+/* .idknow {
+    direction: ltr !important;
+} */
+
+.txt-margin {
+    margin-right: 4px;
+}
+
+.make-btn {
+    /* background: rgb(255, 0, 170); */
+    background-image: linear-gradient(#ed61be, rgb(255, 0, 170));
+    color: white;
+    border-radius: 3.25px;
+    border: none;
+    outline: none;
+}
+
+.fexample {
+    direction: ltr;
+}
+
+.make-btn:hover {
+    transition: 2000ms 20ms ease-in all;
+    /* transform: scale(2); */
+    background-image: linear-gradient(#e341ad, rgb(238, 32, 169));
+    color: #e5e7eb;
 }

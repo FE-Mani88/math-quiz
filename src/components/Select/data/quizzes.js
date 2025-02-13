@@ -84,7 +84,7 @@ export const quizzes = [
     description: 'سوالات این بخش شامل مباحث با سطح متوسط است و سوالات معتبر از منابع مختلف به بهبود سطح ریاضی شما کمک میکند' ,
     duration: 10,
     totalQuestions: 5,
-    image: 'https://news.mit.edu/sites/default/files/images/202208/MIT-MathProblemSolver-01-press.jpg',
+    image: 'https://infinitylearn.com/surge/wp-content/uploads/2021/12/MicrosoftTeams-image-58.jpg',
     topics: ['تست هوش', 'حجم و مساحت دایره', 'مجموعه ها']
   },
   {

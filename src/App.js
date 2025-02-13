@@ -89,8 +89,8 @@ function App() {
         <Route path="/shop" element={<Shop />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path='*' element={<Error404 />}></Route>
-        <Route path='/wquiz' element={<Wquiz />}></Route>
-        <Route path='/bquiz' element={<Bquiz />}></Route>
+        {/* <Route path='/wquiz' element={<Wquiz />}></Route> */}
+        {/* <Route path='/bquiz' element={<Bquiz />}></Route> */}
         {/* <Route path='/Select' element={<Select/>}></Route> */}
       </Routes>) : (
         <div className='flex items-center justify-center h-[100vh]'>
