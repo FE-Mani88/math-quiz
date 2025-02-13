@@ -57,12 +57,12 @@ export default function Landing() {
                     <li className='c8h5l'>
                       <a class="chip0 c4mnq c5mpl chs2t cazq3 ckdyj cdm1x c6m7s ckwz7 cysah cua40 make-btn"
                         href="#">
-                        <p className='txt-margin'> ساخت اکانت  </p>
+                        <p className='txt-margin !text-[11.1px] sm:!text-[18px] '> ساخت اکانت  </p>
                         <User />
                       </a>
                     </li>
-                    <li class="c8h5l">
-                      <a class="c2pi2 c0ayg c4wey cl6ef cf4pm cqbpd cxmkl c4aul c76qn" href="#">
+                    <li class="c8h5l flex items-center">
+                      <a class="!text-[11.1px] sm:!text-[18px] c2pi2 c0ayg c4wey cl6ef cf4pm cqbpd cxmkl c4aul c76qn" href="#">
                         ورود به اکانت <span class="cfe40 cr1tk c56im cv73b c6m7s ckwz7 ccx8x"><LogIn /></span>
                       </a>
                     </li>
@@ -90,13 +90,11 @@ export default function Landing() {
                   <div className="cbl28 czcad ckxd8 c4qns czwux cohxx">
                     <div data-aos="zoom-out" className="aos-init aos-animate">
                       <div className="c8a4e ciljg cmgtq czrr8 c4a1n coaq6 cld06 cimbm clnec cm1n3 cv4y4 cjzl6 cfgdq cfqr8 ctz45 cyb34 c6760 cs42d ca9no">
-                        <div className="flex gap-1.5 ckdyj">
-                          <Link className="cpfyo c4mnq cazq3 ce7rf cdm1x c6m7s ckwz7 c76qn" to="/about">
+                        <div className="flex gap-1.5 ckdyj items-center">
+                          <Link className="hover:text-blue-300 cpfyo c4mnq cazq3 ce7rf cdm1x c6m7s ckwz7 c76qn" to="/about">
+                            درباره ما
                             بیشتر بدانید
                           </Link>
-                          <p>
-                            درباره ما
-                          </p>
                         </div>
                       </div>
                     </div>
