@@ -18,6 +18,7 @@ import { QuizCard } from './components/Select/QuizCard';
 import { QuizDetails } from './components/Select/QuizDetails';
 // import { quizzes } from './components/Select/ActiveQuiz';
 import { quizzes } from './components/Select/data/quizzes';
+import { div } from 'framer-motion/client';
 // import Select from './components/Select/Select';
 // import Quiz from './components/Quiz/Quiz';
 ///////////////////////////////////
@@ -89,6 +90,7 @@ function App() {
         <Route path="/shop" element={<Shop />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path='*' element={<Error404 />}></Route>
+        <Route path='/login' element={<div className='text-white'>در حال  ساخت...</div>}></Route>
         {/* <Route path='/wquiz' element={<Wquiz />}></Route> */}
         {/* <Route path='/bquiz' element={<Bquiz />}></Route> */}
         {/* <Route path='/Select' element={<Select/>}></Route> */}
