@@ -193,11 +193,14 @@ export default function Landing() {
                 <div className="cyo0e c2n62">
                   {/* Section header */}
                   <div className="cbl28 cqg01 czfa1 ckxd8 c2e3f">
-                    <h2 className="c4cmz cvx4v cejd3">Use sensitive data without sacrificing privacy</h2>
+                    <h2 className="c4cmz cvx4v cejd3">
+                      MathYar - پلتفرم آموزشی ریاضی
+                    </h2>
                     <div className="cbl28 cms5w">
-                      <p className="cbqc4 ckdyj">Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui
-                        officia deserunt mollit anim id est.</p>
+                      <p className="cbqc4 ckdyj">
+                        ســــاده، ســـریع، مــطمــئن
+
+                      </p>
                     </div>
                   </div>
                   {/* Section content */}

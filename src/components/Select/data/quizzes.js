@@ -84,7 +84,7 @@ export const quizzes = [
     description: 'سوالات این بخش شامل مباحث با سطح متوسط است و سوالات معتبر از منابع مختلف به بهبود سطح ریاضی شما کمک میکند' ,
     duration: 10,
     totalQuestions: 5,
-    image: 'https://infinitylearn.com/surge/wp-content/uploads/2021/12/MicrosoftTeams-image-58.jpg',
+    image: 'https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-01/math-for-ai.jpg',
     topics: ['تست هوش', 'حجم و مساحت دایره', 'مجموعه ها']
   },
   {
@@ -95,7 +95,8 @@ export const quizzes = [
     description:'سوالات این بخش شامل مباحث با سطح سخت است و سوالات معتبر از منابع مختلف به بهبود سطح ریاضی شما کمک میکند' ,
     duration: 10,
     totalQuestions: 5,
-    image: 'https://media.licdn.com/dms/image/v2/C5612AQG5XSljO0y7dg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1527028764207?e=2147483647&v=beta&t=gZNTZIicTG_ZfWCoD20QJwAsTkFYVT9SVNqdL-IWGrI',
+    image: 'https://t3.ftcdn.net/jpg/02/16/53/96/360_F_216539624_iy8PCnvHwEfVt9Xd18EgBJoGZuJ0qy0P.jpg',
+
     topics: ['حجم و مساحت', 'استدلال و اثبات', 'مجموعه ها']
   },
 ];
